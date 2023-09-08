@@ -83,7 +83,70 @@ console.log(checkForWord1)
 const word="is"
 console.log(`The searched word "${word}" ${meroString.includes(word)?'is':'is not'} found in the variable meroString`)
 
-                    /* differences between primitive string and string object */
+
+
+
+
+/*                                       indexof()  
+indexOf(searchElement)
+indexOf(searchElement, fromIndex)
+
+*/
+
+let store=meroString.indexOf("this?")
+console.log(store)
+let store1= meroString.indexOf("what",6)           /*  at which to start searching */
+console.log(store1)
+
+
+
+
+
+
+/*                                         lastIndexOf()
+lastIndexOf(searchString)            starts from the end of the string and search for the first occurence of string
+lastIndexOf(searchString, position)  suppose position is 4, it will go to the index 4 and search like 4,3,2,1,0 (R->L)
+*/
+
+const word1="is"
+lastindex= meroString.lastIndexOf(word1)
+console.log(`The last index of searched word "${word1}" is ${lastindex!=-1? `found at ${lastindex}`: `not found`}}`)
+
+
+
+
+
+  /*                                   match( )
+  match(regexp)
+  */     
+ 
+  
+
+
+
+  /*                                    trim()
+  trim()   removes the whitespaces before and after of the string 
+  */
+  console.log( "     hello lets trim this string    ".trim())            
+
+  
+
+  /*                                    trimEnd()
+trimEnd()       removes whitespaces of the end of the string only
+trimRight()     removes whitespaces of the starting string only
+ */
+console.log( "hello lets trim this from End    ".trimEnd())            
+
+
+
+/*                                       trimStart()
+trimStart()       removes whitespaces of the starting string
+trimLeft()
+ */ 
+console.log( "   hello lets trim this from start".trimStart())            
+
+
+  /* differences between primitive string and string object */
                     
 /*       Sometimes, you want to use methods or access properties on strings, like changing the case of letters or finding 
 the length. In JavaScript, these methods and properties are available for string objects, not primitive strings. 
