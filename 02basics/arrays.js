@@ -49,6 +49,10 @@ console.log(meroArray2.name)
 console.log(Array.isArray(meroArray2))    //false
 
 
+
+
+
+
                                       /* Properties */
 /* length */
 console.log(`the length of the meroArray1 is ${meroArray1.length} i.e ${meroArray1}`)
@@ -102,3 +106,130 @@ copyWithin(target, start)
 copyWithin(target, start, end)
 */
 
+
+
+
+
+
+
+
+
+/*                                           unshift()
+unshift()
+unshift(element1)
+unshift(element1, element2)
+unshift(element1, element2, elementN)
+
+The unshift() method of Array instances adds the specified elements to the beginning of an array
+and returns the new length of the array. */
+
+const meroArray7 =[2,3,5,6]
+meroArray7Length= meroArray7.unshift(0,1)
+console.log(` meroArray7 after "meroArray7.unshift(0,1)" gives us ${meroArray7} of length ${meroArray7Length}`)
+
+
+
+
+
+
+/*                                      includes()
+includes(searchElement)
+includes(searchElement, fromIndex)
+
+The includes() method of Array instances determines whether an array includes a certain value among its entries,
+returning true or false as appropriate. */
+const num = 8
+//console.log(`${meroArray7.includes(num)? "Yes, it contains ${num}": "No, it doesn't contain ${num}"}`) 
+// you should not enclose the inner expression in ${} because it will be treated as a literal string.
+console.log(`${meroArray7.includes(num)? "Yes, it contains " + num : "No, it doesn't contain " + num}`)     
+
+
+
+
+
+
+
+
+/*                                           indexOf()
+ */
+console.log(meroArray7)
+console.log(`the index of 5 is ${meroArray7.indexOf(5)}`)
+
+
+
+
+
+
+
+
+/*                                              join()
+join()
+join(separator)
+
+        The join() method of Array instances creates and returns a new string by concatenating all of the elements in 
+        this array, separated by commas or a specified separator string. If the array has only one item, then that item 
+        will be returned without using the separator. */
+
+   console.log(`meroArray7.join( ) = ${meroArray7.join()}`)   
+   console.log(`meroArray7.join(' ') = ${meroArray7.join(' ')}`)
+   console.log(`meroArray7.join('-') = ${meroArray7.join('-')}`)
+
+
+
+
+
+
+
+/*                                               slice and splice
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)                         item1=> item to be inserted
+splice(start, deleteCount, item1, item2)
+splice(start, deleteCount, item1, item2,  itemN)
+
+*/
+const meroArray8 = [1, 2, 3, 4, 5, 6, 7, 8]
+const newArray1 = meroArray8.slice(1, 4)
+console.log(`original array = ${meroArray8} and newArray1=  ${newArray1}`)
+
+const newArray2 = meroArray8.splice(1, 4)       // removes items from index [1 4] of orig. array 
+console.log(`original array = ${meroArray8} and newArray1=  ${newArray2}`)    
+
+// conclusion: Splice manipulates original array but slice doesn't
+
+
+
+
+
+
+
+
+/*                                    checking if an object is an Array 
+Array.isArray()
+*/
+const sabkoArray=[2,3,'mahesh','21']
+console.log(`${Array.isArray(sabkoArray)? "Yes, it is an array": "No, it is not an array"}`)
+
+
+
+
+
+
+
+
+/* Problem: how to merge two arrays ?? */
+/* using concat() */
+const sabkoArray1 = ["Mahesh", "Subodh", "Ramesh", "Ravish"]
+const sabkoArray2 = [1, 2, 3, 4, 5]
+// const concatenatedArr = sabkoArray1.concat(sabkoArray2)
+// console.log(concatenatedArr)
+
+// /* using push() */
+// sabkoArray2.push(sabkoArray1)
+// console.log(`The result of .push() to merge two arrays is : ${sabkoArray2}`)
+
+
+
+/* Recommended way: using spread operator */
+const bestWay= [...sabkoArray1, ...sabkoArray2]
+console.log(bestWay)
