@@ -1,0 +1,1 @@
+/* js has a behavior called as prototypal behavior */
