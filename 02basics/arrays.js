@@ -233,3 +233,22 @@ const sabkoArray2 = [1, 2, 3, 4, 5]
 /* Recommended way: using spread operator */
 const bestWay= [...sabkoArray1, ...sabkoArray2]
 console.log(bestWay)
+
+
+
+
+
+
+
+
+/*************************************************************************************************************
+ Destructive methods:
+                      one that changes the original array when they run. the elements are destroyed and remade
+                      eg: sort, reverse and splice
+Non-destructive methods:
+                      one that gives a new version of the array. the original is not touched or destroyed but 
+                      you are given a new array based on original array. i.e map, slice and filter
+
+***************************************************************************************************************/
+
+  
